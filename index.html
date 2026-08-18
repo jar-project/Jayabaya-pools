@@ -1,0 +1,1371 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jayabaya Pools - Jasa Perawatan Kolam Renang Jakarta</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        :root {
+            --teal: #00B4D8;
+            --teal-dark: #0077B6;
+            --teal-light: #48D1E0;
+            --coral: #FF6B5B;
+            --coral-light: #FF8A7D;
+            --coral-dark: #E85345;
+            --cream: #F0F9FF;
+            --paper: #F5FBFF;
+            --white: #FFFFFF;
+            --ink: #1A1A1A;
+            --muted: #6B7280;
+            --line: #D5E8F5;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Nunito', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--paper);
+            color: var(--ink);
+            line-height: 1.6;
+            background-image: 
+                radial-gradient(circle at 10% 90%, rgba(0, 180, 216, 0.08) 0%, transparent 40%),
+                radial-gradient(circle at 90% 10%, rgba(255, 107, 91, 0.08) 0%, transparent 40%);
+        }
+
+        .wrap {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* HEADER */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(245, 251, 255, 0.98);
+            backdrop-filter: blur(12px);
+            border-bottom: 2px solid var(--line);
+            z-index: 1000;
+            padding: 1rem 0;
+        }
+
+        header.scrolled {
+            box-shadow: 0 8px 32px rgba(0, 180, 216, 0.15);
+        }
+
+        .nav-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-box {
+            display: inline-flex;
+            max-width: 140px;
+        }
+
+        .logo-box img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+        }
+
+        nav {
+            display: flex;
+            gap: 3rem;
+        }
+
+        nav a {
+            color: var(--ink);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 600;
+            transition: color 0.3s ease;
+            letter-spacing: -0.2px;
+            font-family: 'Quicksand', sans-serif;
+        }
+
+        nav a:hover {
+            color: var(--teal);
+        }
+
+        /* HAMBURGER */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 6px;
+            cursor: pointer;
+            z-index: 1001;
+        }
+
+        .hamburger span {
+            width: 26px;
+            height: 2.5px;
+            background: var(--ink);
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(9px, 9px);
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(8px, -8px);
+        }
+
+        /* MAIN */
+        main {
+            margin-top: 80px;
+        }
+
+        section {
+            scroll-margin-top: 80px;
+        }
+
+        /* HERO SECTION */
+        .hero {
+            padding: 5.5rem 0;
+            background: linear-gradient(135deg, var(--teal) 0%, var(--teal-dark) 50%, var(--coral) 100%);
+            color: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            bottom: -100px;
+            right: -100px;
+            width: 500px;
+            height: 500px;
+            background: rgba(255, 255, 255, 0.07);
+            border-radius: 50%;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: -50px;
+            left: 5%;
+            width: 300px;
+            height: 300px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 50%;
+        }
+
+        .hero-inner {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            line-height: 1.15;
+            margin-bottom: 1.5rem;
+            letter-spacing: -1px;
+            font-family: 'Quicksand', sans-serif;
+        }
+
+        .kicker {
+            display: inline-block;
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2.5px;
+            color: rgba(255, 255, 255, 0.85);
+            margin-bottom: 1rem;
+            font-family: 'Quicksand', sans-serif;
+        }
+
+        .hero-desc {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.92);
+            margin-bottom: 2.5rem;
+            line-height: 1.8;
+        }
+
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+            padding: 0.95rem 1.8rem;
+            border-radius: 22px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            cursor: pointer;
+            white-space: nowrap;
+            letter-spacing: -0.2px;
+            font-family: 'Quicksand', sans-serif;
+        }
+
+        .btn i {
+            flex-shrink: 0;
+        }
+
+        .btn-primary {
+            background: var(--coral);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background: var(--coral-light);
+            transform: translateY(-3px);
+            box-shadow: 0 12px 36px rgba(255, 107, 91, 0.35);
+        }
+
+        .btn-white {
+            background: var(--white);
+            color: var(--teal);
+            border: 2px solid var(--white);
+        }
+
+        .btn-white:hover {
+            background: var(--cream);
+            transform: translateY(-3px);
+            box-shadow: 0 12px 36px rgba(255, 255, 255, 0.3);
+        }
+
+        .btn-lg {
+            padding: 1.1rem 2.2rem;
+            font-size: 1rem;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 2.5rem;
+        }
+
+        .hero img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            border-radius: 22px;
+            border: 3px solid var(--white);
+            box-shadow: 0 24px 64px rgba(0, 0, 0, 0.25);
+        }
+
+        /* SERVICES SECTION */
+        section#layanan {
+            padding: 5rem 0;
+            background: var(--white);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            color: var(--teal-dark);
+            margin-top: 0.5rem;
+            letter-spacing: -0.8px;
+            font-family: 'Quicksand', sans-serif;
+        }
+
+        .section-header .subtitle {
+            font-size: 1rem;
+            color: var(--muted);
+            margin-top: 0.75rem;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: linear-gradient(135deg, var(--cream) 0%, rgba(0, 180, 216, 0.08) 100%);
+            padding: 2.5rem 2rem;
+            border-radius: 22px;
+            border: 2px solid var(--line);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--teal), var(--coral));
+            border-radius: 22px 22px 0 0;
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 16px 48px rgba(0, 180, 216, 0.15);
+            border-color: var(--teal);
+        }
+
+        .service-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .service-icon {
+            width: 64px;
+            height: 64px;
+            background: linear-gradient(135deg, var(--teal), var(--teal-light));
+            border-radius: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: var(--white);
+        }
+
+        .service-card h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--ink);
+            margin-bottom: 0.75rem;
+            letter-spacing: -0.3px;
+            font-family: 'Quicksand', sans-serif;
+        }
+
+        .service-card p {
+            color: var(--muted);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        /* ABOUT SECTION */
+        section#tentang {
+            padding: 5rem 0;
+            background: var(--cream);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3.5rem;
+            align-items: center;
+        }
+
+        .about-img {
+            border-radius: 22px;
+            border: 3px solid var(--teal);
+            overflow: hidden;
+            box-shadow: 0 20px 56px rgba(0, 180, 216, 0.15);
+        }
+
+        .about-img img {
+            width: 100%;
+            height: 450px;
+            object-fit: cover;
+        }
+
+        .about-content h2 {
+            font-size: 2.3rem;
+            font-weight: 800;
+            color: var(--teal-dark);
+            margin-bottom: 1.5rem;
+            margin-top: 0.5rem;
+            letter-spacing: -0.5px;
+            font-family: 'Quicksand', sans-serif;
+        }
+
+        .about-content p {
+            color: var(--muted);
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        .features {
+            list-style: none;
+            margin: 2rem 0;
+        }
+
+        .features li {
+            padding: 0.75rem 0;
+            padding-left: 2rem;
+            position: relative;
+            color: var(--muted);
+            font-size: 0.95rem;
+        }
+
+        .features li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--teal);
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+
+        /* STATS */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .stat-box {
+            padding: 2.5rem 1.5rem;
+            background: linear-gradient(135deg, var(--teal), var(--teal-dark));
+            border-radius: 22px;
+            text-align: center;
+            color: var(--white);
+            border: 3px solid var(--coral);
+        }
+
+        .stat-num {
+            font-size: 2.8rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.5px;
+            font-family: 'Quicksand', sans-serif;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            opacity: 0.95;
+        }
+
+        /* WHY CHOOSE US SECTION */
+        section#mengapa {
+            padding: 5rem 0;
+            background: var(--paper);
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3.5rem;
+            align-items: center;
+        }
+
+        .why-content h2 {
+            font-size: 2.3rem;
+            font-weight: 800;
+            color: var(--teal-dark);
+            margin-bottom: 1.5rem;
+            margin-top: 0.5rem;
+            letter-spacing: -0.5px;
+            font-family: 'Quicksand', sans-serif;
+        }
+
+        .why-content p {
+            color: var(--muted);
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+
+        .why-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .why-item {
+            display: flex;
+            gap: 1.25rem;
+        }
+
+        .why-icon {
+            width: 56px;
+            height: 56px;
+            background: linear-gradient(135deg, var(--coral), var(--coral-light));
+            border-radius: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .why-item h4 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--ink);
+            margin-bottom: 0.3rem;
+            letter-spacing: -0.2px;
+            font-family: 'Quicksand', sans-serif;
+        }
+
+        .why-item p {
+            font-size: 0.9rem;
+            color: var(--muted);
+            margin: 0;
+        }
+
+        .why-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 22px;
+            border: 3px solid var(--teal);
+            box-shadow: 0 20px 56px rgba(0, 180, 216, 0.15);
+        }
+
+        /* TESTIMONIALS SECTION */
+        section#testimoni {
+            padding: 5rem 0;
+            background: var(--cream);
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .testimonial-card {
+            background: var(--white);
+            padding: 2.5rem 2rem;
+            border-radius: 22px;
+            border: 2px solid var(--line);
+            transition: all 0.3s ease;
+        }
+
+        .testimonial-card:hover {
+            border-color: var(--teal);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(0, 180, 216, 0.1);
+        }
+
+        .testi-stars {
+            color: #FFD700;
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            gap: 0.4rem;
+        }
+
+        .testi-stars i {
+            font-size: 0.9rem;
+        }
+
+        .testi-text {
+            color: var(--muted);
+            font-style: italic;
+            margin-bottom: 2rem;
+            line-height: 1.7;
+            font-size: 0.95rem;
+        }
+
+        .testi-author {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .testi-avatar {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, var(--teal), var(--coral));
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-weight: 800;
+            font-size: 1rem;
+            flex-shrink: 0;
+            font-family: 'Quicksand', sans-serif;
+        }
+
+        .testi-author strong {
+            display: block;
+            color: var(--ink);
+            margin-bottom: 0.2rem;
+            font-size: 0.95rem;
+            font-family: 'Quicksand', sans-serif;
+        }
+
+        .testi-author small {
+            color: var(--muted);
+            font-size: 0.8rem;
+        }
+
+        /* PROCESS SECTION */
+        section#proses {
+            padding: 5rem 0;
+            background: var(--paper);
+        }
+
+        .process-timeline {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .process-step {
+            flex: 1;
+            min-width: 200px;
+            text-align: center;
+        }
+
+        .step-number {
+            width: 56px;
+            height: 56px;
+            background: linear-gradient(135deg, var(--teal), var(--teal-dark));
+            color: var(--white);
+            border-radius: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 1.4rem;
+            margin: 0 auto 1.2rem;
+            border: 3px solid var(--coral);
+            font-family: 'Quicksand', sans-serif;
+        }
+
+        .process-step h3 {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--ink);
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.2px;
+            font-family: 'Quicksand', sans-serif;
+        }
+
+        .process-step p {
+            font-size: 0.9rem;
+            color: var(--muted);
+            line-height: 1.6;
+        }
+
+        .process-arrow {
+            font-size: 1.8rem;
+            color: var(--teal);
+            flex-shrink: 0;
+            opacity: 0.6;
+            display: none;
+        }
+
+        /* CONTACT SECTION */
+        section#kontak {
+            padding: 5rem 0;
+            background: linear-gradient(135deg, var(--teal) 0%, var(--teal-dark) 50%, var(--coral) 100%);
+            color: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        section#kontak::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 500px;
+            height: 500px;
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 50%;
+        }
+
+        section#kontak::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -20%;
+            width: 400px;
+            height: 400px;
+            background: rgba(255, 255, 255, 0.06);
+            border-radius: 50%;
+        }
+
+        .contact-inner {
+            position: relative;
+            z-index: 2;
+        }
+
+        .contact-inner h2 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            color: var(--white);
+            margin-top: 0.5rem;
+            letter-spacing: -0.8px;
+            font-family: 'Quicksand', sans-serif;
+        }
+
+        .contact-inner > p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.1rem;
+            margin-top: 1rem;
+            max-width: 650px;
+        }
+
+        .contact-btns {
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 2.5rem;
+            flex-wrap: wrap;
+        }
+
+        /* FOOTER */
+        footer {
+            background: var(--ink);
+            color: rgba(255, 255, 255, 0.8);
+            padding: 3.5rem 0 2rem;
+        }
+
+        .foot-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 2.5rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .foot-brand {
+            color: rgba(255, 255, 255, 0.85);
+        }
+
+        .fb-logo {
+            display: inline-flex;
+            margin-bottom: 1.5rem;
+            max-width: 140px;
+        }
+
+        .fb-logo img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+        }
+
+        .foot-tagline {
+            font-weight: 800;
+            margin-bottom: 0.75rem;
+            color: var(--white);
+            letter-spacing: -0.3px;
+            font-size: 1.05rem;
+            font-family: 'Quicksand', sans-serif;
+        }
+
+        .foot-brand p {
+            font-size: 0.9rem;
+            line-height: 1.7;
+        }
+
+        .foot-h {
+            font-weight: 800;
+            color: var(--teal-light);
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            letter-spacing: 2px;
+            font-family: 'Quicksand', sans-serif;
+        }
+
+        .foot-links,
+        .foot-contact {
+            list-style: none;
+        }
+
+        .foot-links li,
+        .foot-contact li {
+            margin-bottom: 0.75rem;
+        }
+
+        .foot-links a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .foot-links a:hover {
+            color: var(--teal-light);
+        }
+
+        .foot-contact {
+            font-size: 0.9rem;
+        }
+
+        .foot-contact li {
+            display: flex;
+            gap: 0.75rem;
+            align-items: flex-start;
+        }
+
+        .fi {
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            color: var(--teal-light);
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .fi i {
+            font-size: 16px;
+        }
+
+        .foot-contact small {
+            display: block;
+            opacity: 0.7;
+            font-size: 0.8rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .foot-contact a {
+            color: var(--white);
+            text-decoration: none;
+        }
+
+        .foot-map {
+            border-radius: 16px;
+            overflow: hidden;
+            height: 200px;
+        }
+
+        .foot-map iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .copy {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 1.5rem;
+            text-align: center;
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        /* FAB BUTTON */
+        .fab-btn {
+            position: fixed !important;
+            bottom: 2rem !important;
+            right: 2rem !important;
+            width: 60px !important;
+            height: 60px !important;
+            background: linear-gradient(135deg, var(--coral), var(--coral-light)) !important;
+            color: var(--white) !important;
+            border-radius: 22px !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            text-decoration: none !important;
+            box-shadow: 0 12px 40px rgba(255, 107, 91, 0.4) !important;
+            transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+            z-index: 9999 !important;
+            pointer-events: auto !important;
+            opacity: 1 !important;
+            visibility: visible !important;
+            left: auto !important;
+            top: auto !important;
+        }
+
+        .fab-btn:hover {
+            transform: scale(1.12) !important;
+            box-shadow: 0 16px 48px rgba(255, 107, 91, 0.5) !important;
+        }
+
+        .fab-btn i {
+            font-size: 26px !important;
+            pointer-events: none;
+        }
+
+        /* REVEAL ANIMATIONS */
+        .reveal {
+            opacity: 0;
+            transform: translateY(25px);
+            transition: all 0.7s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        .reveal.in {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .fab-btn {
+            opacity: 1 !important;
+            transform: none !important;
+            visibility: visible !important;
+        }
+
+        .reveal.s1 { transition-delay: 0.1s; }
+        .reveal.s2 { transition-delay: 0.2s; }
+        .reveal.s3 { transition-delay: 0.3s; }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .wrap { padding: 0 1.5rem; }
+
+            .hamburger { display: flex; }
+
+            nav {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--paper);
+                flex-direction: column;
+                gap: 0;
+                padding: 1rem 0;
+                border-bottom: 2px solid var(--line);
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.3s ease;
+            }
+
+            nav.open { max-height: 320px; }
+
+            nav a {
+                padding: 0.75rem 2rem;
+                border-bottom: 1px solid var(--line);
+            }
+
+            nav a:hover {
+                background: var(--cream);
+                color: var(--teal);
+            }
+
+            .hero-inner, .about-grid, .why-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 { font-size: 2.2rem; }
+            .hero img { height: 350px; }
+            .section-header h2 { font-size: 1.8rem; }
+            .about-content h2, .why-content h2 { font-size: 1.6rem; }
+            .stats-grid, .why-list { grid-template-columns: 1fr; }
+            .foot-grid { grid-template-columns: 1fr; gap: 2rem; }
+            .contact-btns { flex-direction: column; }
+            .btn { width: 100%; }
+            .process-timeline { flex-direction: column; gap: 1rem; }
+            .process-arrow { display: block; transform: rotate(90deg); }
+        }
+
+        @media (max-width: 480px) {
+            .hero { padding: 3.5rem 0; }
+            .hero h1 { font-size: 1.8rem; }
+            .hero-desc { font-size: 1rem; }
+            .hero-cta { flex-direction: column; gap: 1rem; }
+            .section-header h2 { font-size: 1.6rem; }
+            .services-grid { grid-template-columns: 1fr; }
+            .testimonials-grid { grid-template-columns: 1fr; }
+            .fab-btn {
+                width: 52px !important;
+                height: 52px !important;
+                bottom: 1.5rem !important;
+                right: 1.5rem !important;
+            }
+            .fab-btn i { font-size: 22px !important; }
+            .process-timeline { gap: 0.5rem; }
+            .process-arrow { font-size: 1.4rem; }
+        }
+    </style>
+</head>
+<body>
+    <header id="nav">
+        <div class="wrap nav-inner">
+            <div class="logo-box"><img src="logo.png" alt="Jayabaya Pools"></div>
+            <nav id="navMenu">
+                <a href="#home">Beranda</a>
+                <a href="#layanan">Layanan</a>
+                <a href="#tentang">Tentang</a>
+                <a href="#kontak">Kontak</a>
+            </nav>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- HERO -->
+        <section class="hero" id="home">
+            <div class="wrap hero-inner">
+                <div>
+                    <span class="kicker reveal">Jasa Kolam Renang</span>
+                    <h1 class="reveal s1">Perawatan Kolam Renang Profesional & Terpercaya</h1>
+                    <p class="hero-desc reveal s2">Jayabaya Pools menyediakan layanan lengkap perawatan kolam renang, water treatment, pembersihan, service pompa, dan penjualan alat kolam renang dengan tim profesional berpengalaman di Jakarta.</p>
+                    <div class="hero-cta reveal s3">
+                        <a href="https://wa.me/6281235411946?text=Halo%20Jayabaya%20Pools%2C%20saya%20butuh%20jasa%20perawatan%20kolam%20renang" target="_blank" rel="noopener" class="btn btn-primary btn-lg">
+                            <i class="fab fa-whatsapp"></i>
+                            Hubungi Kami
+                        </a>
+                        <a href="#layanan" class="btn btn-white btn-lg">Lihat Layanan</a>
+                    </div>
+                </div>
+                <div class="reveal s1">
+                    <img src="image (1).png" alt="Perawatan Kolam Renang Profesional">
+                </div>
+            </div>
+        </section>
+
+        <!-- SERVICES -->
+        <section id="layanan">
+            <div class="wrap">
+                <div class="section-header reveal">
+                    <span class="kicker">Layanan</span>
+                    <h2 class="reveal s1">Layanan Kolam Renang Lengkap</h2>
+                    <p class="subtitle reveal s2">Solusi profesional untuk semua kebutuhan kolam renang Anda</p>
+                </div>
+
+                <div class="services-grid">
+                    <div class="service-card reveal">
+                        <div class="service-icon"><i class="fas fa-spray-can"></i></div>
+                        <h3>Jasa Perawatan Kolam</h3>
+                        <p>Perawatan berkala kolam renang dengan standar profesional dan hasil maksimal untuk air jernih.</p>
+                    </div>
+
+                    <div class="service-card reveal s1">
+                        <div class="service-icon"><i class="fas fa-droplet"></i></div>
+                        <h3>Water Treatment</h3>
+                        <p>Penjernihan air kolam dengan teknologi treatment kimia profesional dan efektif terjamin.</p>
+                    </div>
+
+                    <div class="service-card reveal s2">
+                        <div class="service-icon"><i class="fas fa-broom"></i></div>
+                        <h3>Pembersihan Kolam</h3>
+                        <p>Pembersihan menyeluruh kolam renang dari dasar hingga permukaan air dengan sempurna.</p>
+                    </div>
+
+                    <div class="service-card reveal">
+                        <div class="service-icon"><i class="fas fa-cog"></i></div>
+                        <h3>Service Pompa Kolam</h3>
+                        <p>Service pompa, filter, dan sistem sirkulasi kolam renang dengan teknisi berpengalaman.</p>
+                    </div>
+
+                    <div class="service-card reveal s1">
+                        <div class="service-icon"><i class="fas fa-shopping-bag"></i></div>
+                        <h3>Penjualan Alat Kolam</h3>
+                        <p>Menyediakan alat-alat kolam renang berkualitas tinggi dengan harga terjangkau dan terpercaya.</p>
+                    </div>
+
+                    <div class="service-card reveal s2">
+                        <div class="service-icon"><i class="fas fa-tools"></i></div>
+                        <h3>Perbaikan & Renovasi</h3>
+                        <p>Perbaikan dan renovasi kolam renang yang rusak dengan material berkualitas dan profesional.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT -->
+        <section id="tentang">
+            <div class="wrap">
+                <div class="about-grid">
+                    <div class="about-img reveal">
+                        <img src="image (2).png" alt="Tim Jayabaya Pools">
+                    </div>
+                    <div class="about-content reveal s1">
+                        <span class="kicker">Tentang Kami</span>
+                        <h2>Jayabaya Pools Jakarta</h2>
+                        <p>Jayabaya Pools adalah layanan perawatan kolam renang terpercaya yang telah melayani ribuan pelanggan di Jakarta. Kami berkomitmen memberikan layanan terbaik dengan harga terjangkau dan hasil yang memuaskan untuk semua jenis kolam renang.</p>
+
+                        <ul class="features">
+                            <li>Tim profesional dan berpengalaman di bidang kolam renang</li>
+                            <li>Menggunakan produk berkualitas tinggi dan aman untuk keluarga</li>
+                            <li>Melayani area Jakarta dengan respon cepat dan profesional</li>
+                            <li>Harga terjangkau dengan kualitas terjamin dan terpercaya</li>
+                            <li>Ribuan pelanggan puas di seluruh Jakarta</li>
+                        </ul>
+
+                        <div class="stats-grid">
+                            <div class="stat-box">
+                                <div class="stat-num">88+</div>
+                                <div class="stat-label">Posting Proyek</div>
+                            </div>
+                            <div class="stat-box">
+                                <div class="stat-num">315</div>
+                                <div class="stat-label">Followers</div>
+                            </div>
+                            <div class="stat-box">
+                                <div class="stat-num">1000+</div>
+                                <div class="stat-label">Pelanggan Setia</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- WHY CHOOSE US -->
+        <section id="mengapa">
+            <div class="wrap">
+                <div class="why-grid">
+                    <div class="why-content reveal">
+                        <span class="kicker">Keunggulan</span>
+                        <h2>Mengapa Memilih Jayabaya Pools?</h2>
+                        <p>Jayabaya Pools adalah pilihan terbaik untuk kolam renang Anda dengan pengalaman bertahun-tahun, tim profesional, dan komitmen terhadap kepuasan pelanggan.</p>
+                        
+                        <div class="why-list">
+                            <div class="why-item reveal s1">
+                                <div class="why-icon">⭐</div>
+                                <div>
+                                    <h4>Profesional & Berpengalaman</h4>
+                                    <p>Tim terlatih di bidangnya</p>
+                                </div>
+                            </div>
+                            <div class="why-item reveal s2">
+                                <div class="why-icon">✓</div>
+                                <div>
+                                    <h4>Terjangkau & Transparan</h4>
+                                    <p>Harga kompetitif jelas</p>
+                                </div>
+                            </div>
+                            <div class="why-item reveal s3">
+                                <div class="why-icon">💧</div>
+                                <div>
+                                    <h4>Hasil Maksimal</h4>
+                                    <p>Air jernih & sehat</p>
+                                </div>
+                            </div>
+                            <div class="why-item reveal">
+                                <div class="why-icon">⚡</div>
+                                <div>
+                                    <h4>Responsif & Cepat</h4>
+                                    <p>Siap kapan saja</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="why-image reveal s1">
+                        <img src="image (3).png" alt="Hasil Kerja Jayabaya Pools">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TESTIMONIALS -->
+        <section id="testimoni">
+            <div class="wrap">
+                <div class="section-header reveal">
+                    <span class="kicker">Testimoni</span>
+                    <h2 class="reveal s1">Kepuasan Pelanggan</h2>
+                    <p class="subtitle reveal s2">Dengarkan pengalaman pelanggan yang telah mempercayai Jayabaya Pools</p>
+                </div>
+
+                <div class="testimonials-grid reveal">
+                    <div class="testimonial-card reveal">
+                        <div class="testi-stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="testi-text">"Jayabaya Pools sangat profesional dan responsif. Kolam renang kami menjadi lebih bersih dan terawat. Harga juga sangat terjangkau. Sangat merekomendasikan layanan mereka!"</p>
+                        <div class="testi-author">
+                            <div class="testi-avatar">TJ</div>
+                            <div>
+                                <strong>Tri Jaka</strong>
+                                <small>Pemilik Rumah Jakarta</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card reveal s1">
+                        <div class="testi-stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="testi-text">"Tim Jayabaya Pools sangat profesional dan terpercaya. Service pompa kolam kami dikerjakan dengan baik. Kolam sekarang berfungsi dengan sempurna dan efisien!"</p>
+                        <div class="testi-author">
+                            <div class="testi-avatar">MS</div>
+                            <div>
+                                <strong>Mei Suherman</strong>
+                                <small>Pemilik Villa Jakarta</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card reveal s2">
+                        <div class="testi-stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="testi-text">"Jayabaya Pools memberikan layanan terbaik untuk kolam hotel kami. Perawatan konsisten dan hasil sempurna. Kami sangat puas dan akan terus bekerja sama jangka panjang!"</p>
+                        <div class="testi-author">
+                            <div class="testi-avatar">RK</div>
+                            <div>
+                                <strong>Robi Kusuma</strong>
+                                <small>Manager Hotel Jakarta</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROCESS -->
+        <section id="proses">
+            <div class="wrap">
+                <div class="section-header reveal">
+                    <span class="kicker">Proses</span>
+                    <h2 class="reveal s1">Cara Kami Bekerja</h2>
+                    <p class="subtitle reveal s2">Langkah-langkah profesional untuk hasil terbaik</p>
+                </div>
+
+                <div class="process-timeline reveal">
+                    <div class="process-step reveal">
+                        <div class="step-number">1</div>
+                        <h3>Hubungi Kami</h3>
+                        <p>Hubungi via WhatsApp untuk konsultasi gratis tentang kolam Anda</p>
+                    </div>
+                    <div class="process-arrow reveal s1">→</div>
+                    <div class="process-step reveal s1">
+                        <div class="step-number">2</div>
+                        <h3>Survey Gratis</h3>
+                        <p>Tim kami datang survei dan analisis kondisi kolam Anda dengan detail</p>
+                    </div>
+                    <div class="process-arrow reveal s2">→</div>
+                    <div class="process-step reveal s2">
+                        <div class="step-number">3</div>
+                        <h3>Penawaran Terbaik</h3>
+                        <p>Kami berikan penawaran harga terbaik dan paket sesuai kebutuhan Anda</p>
+                    </div>
+                    <div class="process-arrow reveal s3">→</div>
+                    <div class="process-step reveal s3">
+                        <div class="step-number">4</div>
+                        <h3>Pelaksanaan Profesional</h3>
+                        <p>Eksekusi dengan standar profesional tinggi dan hasil yang memuaskan</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="kontak">
+            <div class="wrap contact-inner">
+                <span class="kicker reveal">Hubungi Kami</span>
+                <h2 class="reveal s1">Siap Melayani Kolam Anda</h2>
+                <p class="reveal s2">Hubungi Jayabaya Pools sekarang untuk konsultasi gratis dan dapatkan penawaran terbaik untuk perawatan kolam renang Anda di Jakarta. Kami siap melayani dengan profesional dan terpercaya!</p>
+                <div class="contact-btns reveal s3">
+                    <a href="https://wa.me/6281235411946?text=Halo%20Jayabaya%20Pools%2C%20saya%20butuh%20jasa%20perawatan%20kolam%20renang" target="_blank" rel="noopener" class="btn btn-primary btn-lg">
+                        <i class="fab fa-whatsapp"></i>
+                        Hubungi Sekarang
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="wrap">
+            <div class="foot-grid">
+                <div class="foot-brand">
+                    <div class="fb-logo"><img src="logo-white.png" alt="Jayabaya Pools"></div>
+                    <div class="foot-tagline">Kolam Bersih, Air Jernih</div>
+                    <p>Jayabaya Pools — Layanan perawatan kolam renang profesional dan terpercaya di Jakarta dengan standar kualitas tinggi, harga terjangkau, dan tim berpengalaman.</p>
+                </div>
+
+                <div>
+                    <div class="foot-h">Kontak</div>
+                    <ul class="foot-contact">
+                        <li><span class="fi"><i class="fab fa-whatsapp"></i></span><span><small>WhatsApp</small><a href="https://wa.me/6281235411946" target="_blank" rel="noopener">0812-3541-1946</a></span></li>
+                        <li><span class="fi"><i class="fas fa-envelope"></i></span><span><small>Email</small><a href="mailto:info@jayabayapools.com">info@jayabayapools.com</a></span></li>
+                        <li><span class="fi"><i class="fas fa-map-marker-alt"></i></span><span><small>Lokasi</small><span class="v">Jakarta, Indonesia</span></span></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <div class="foot-h">Menu</div>
+                    <ul class="foot-links">
+                        <li><a href="#home">Beranda</a></li>
+                        <li><a href="#layanan">Layanan</a></li>
+                        <li><a href="#tentang">Tentang</a></li>
+                        <li><a href="#kontak">Kontak</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <div class="foot-h">Lokasi</div>
+                    <div class="foot-map">
+                        <iframe src="https://www.google.com/maps?q=Jakarta&output=embed" title="Lokasi Jakarta" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <div class="copy">
+                Copyright &copy; <span id="year">2026</span> Jayabaya Pools. Semua Hak Dilindungi.
+            </div>
+        </div>
+    </footer>
+
+    <!-- FAB -->
+    <a href="https://wa.me/6281235411946?text=Halo%20Jayabaya%20Pools%2C%20saya%20butuh%20jasa%20perawatan%20kolam%20renang" target="_blank" rel="noopener" class="fab-btn" aria-label="Chat WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        (function(){
+            var nav = document.getElementById('nav');
+            var onScroll = function(){
+                nav.classList.toggle('scrolled', window.scrollY > 8);
+            };
+            onScroll();
+            window.addEventListener('scroll', onScroll, {passive: true});
+
+            var els = document.querySelectorAll('.reveal');
+            if('IntersectionObserver' in window){
+                var io = new IntersectionObserver(function(en){
+                    en.forEach(function(e){
+                        if(e.isIntersecting && !e.target.classList.contains('fab-btn')){
+                            e.target.classList.add('in');
+                            io.unobserve(e.target);
+                        }
+                    });
+                }, {threshold: 0.12, rootMargin: '0px 0px -60px 0px'});
+                els.forEach(function(el){if(!el.classList.contains('fab-btn')){io.observe(el);}});
+            } else {
+                els.forEach(function(el){if(!el.classList.contains('fab-btn')){el.classList.add('in');}});
+            }
+
+            // Hamburger Menu Toggle
+            var hamburger = document.getElementById('hamburger');
+            var navMenu = document.getElementById('navMenu');
+            if(hamburger && navMenu){
+                hamburger.addEventListener('click', function(){
+                    hamburger.classList.toggle('active');
+                    navMenu.classList.toggle('open');
+                });
+                navMenu.querySelectorAll('a').forEach(function(link){
+                    link.addEventListener('click', function(){
+                        hamburger.classList.remove('active');
+                        navMenu.classList.remove('open');
+                    });
+                });
+            }
+
+            document.getElementById('year').textContent = new Date().getFullYear();
+        })();
+    </script>
+</body>
+</html>
